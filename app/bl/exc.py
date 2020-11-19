@@ -1,0 +1,2 @@
+class BLCantFetchDataError(Exception):
+    pass
