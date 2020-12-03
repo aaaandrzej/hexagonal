@@ -8,7 +8,7 @@ def test() -> dict:
 
 
 def persons() -> list:
-    source = int(request.args.get('source', 1))  # TODO czy to powinienem wynieść do persons_route i przekazywać jako zmienną?
+    source = int(request.args.get('source', 1))
 
     bl = Factory.get_persons_query()
     result = bl.get(source)
@@ -17,4 +17,4 @@ def persons() -> list:
     if format == 'json':
         return jsonify(result)
     elif format == 'csv':
-        return jsonify([{'to be': 'implemented'}])  # TODO
+        return jsonify([{'to be': 'implemented'}])  # potential app extension

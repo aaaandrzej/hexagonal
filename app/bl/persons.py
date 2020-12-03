@@ -2,7 +2,7 @@ from app.bl.exc import BLCantFetchDataError
 
 
 class GetPersons:
-    def __init__(self, client_loader, employees_loader):  # TODO czy to wymaga annotations?
+    def __init__(self, client_loader, employees_loader):
         self._client_loader = client_loader
         self._employees_loader = employees_loader
 

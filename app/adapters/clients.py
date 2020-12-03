@@ -9,7 +9,7 @@ def get_clients() -> list:
         with open('users.csv') as f:
             content = f.readlines()
             result = [{'name': row.strip('\n').split(';')[0], 'surname': row.strip('\n').split(';')[1]} for row in
-                      content]  # TODO użyć dataclass
+                      content]  # dataclass could be a better fit there
             return result
 
     except Exception:
